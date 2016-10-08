@@ -1,0 +1,15 @@
+#!/usr/bin/make -f
+# See debhelper(7) (uncomment to enable)
+# output every command that modifies files on the build system.
+#export DH_VERBOSE = 1
+
+%:
+	dh $@
+
+override_dh_auto_build:
+	dh_auto_build
+	pandoc --standalone --to man doc/pbuilder-ev3dev.md | gzip > doc/pbuilder-ev3dev.1.gz
+
+override_dh_auto_clean:
+	dh_auto_clean
+	rm -f doc/pbuilder-ev3dev.1.gz

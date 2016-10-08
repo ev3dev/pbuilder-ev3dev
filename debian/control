@@ -1,0 +1,22 @@
+Source: pbuilder-ev3dev
+Section: devel
+Priority: optional
+Maintainer: David Lechner <david@lechnology.com>
+Build-Depends: debhelper (>=9), pandoc
+Standards-Version: 3.9.6
+Vcs-Git: git://github.com/ev3dev/pbuilder-ev3dev.git
+Vcs-Browser: https://github.com/ev3dev/pbuilder-ev3dev
+
+Package: pbuilder-ev3dev
+Architecture: all
+Depends: ${misc:Depends}
+ , dpkg-dev
+ , git-buildpackage
+ , pbuilder
+ , debootstrap
+ , debian-archive-keyring
+ , ev3dev-archive-keyring
+ , raspbian-archive-keyring
+Recommends: qemu-user-static, debhelper
+Description: Package builder for ev3dev Debian packages
+ Automates the process of building ev3dev Debian packages in a clean chroot.

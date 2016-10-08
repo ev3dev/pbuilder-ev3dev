@@ -1,0 +1,34 @@
+language: bash
+dist: trusty
+sudo: required
+env:
+  - OS=debian ARCH=amd64 DIST=jessie
+  - OS=raspbian ARCH=armhf DIST=jessie
+cache:
+  directories:
+    - $HOME/cache
+
+before_install:
+  - sudo apt-add-repository "deb http://archive.ev3dev.org/ubuntu trusty main"
+  - sudo apt-key adv --keyserver pgp.mit.edu --recv-keys D57D95AF93178A7C
+  - sudo apt-get update
+  - sudo apt-get install --yes --no-install-recommends
+    dpkg-dev
+    git-buildpackage
+    pbuilder
+    debootstrap
+    debian-archive-keyring
+    ev3dev-archive-keyring
+    raspbian-archive-keyring
+    debhelper
+    qemu-user-static
+  - mkdir -p $HOME/bin
+  - ln -s $TRAVIS_BUILD_DIR/src/pbuilder-ev3dev.sh $HOME/bin/pbuilder-ev3dev
+  - export PATH=$HOME/bin:$PATH
+
+before_script:
+  - git checkout -B master
+
+script:
+  - pbuilder-ev3dev base
+  - pbuilder-ev3dev build

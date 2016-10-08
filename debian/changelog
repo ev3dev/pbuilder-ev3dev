@@ -1,0 +1,5 @@
+pbuilder-ev3dev (1.0.0) stable; urgency=medium
+
+  * Initial Release.
+
+ -- David Lechner <david@lechnology.com>  Sat, 08 Oct 2016 21:33:39 -0500

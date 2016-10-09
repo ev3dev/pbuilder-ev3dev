@@ -57,13 +57,13 @@ be setup to use **git-buildpackage**.
 
 # ENVIRONMENT
 
-OS, ARCH, DIST
+`OS`, `ARCH`, `DIST`
 : See **USAGE** section above.
 
-GBP_OPTIONS
-: Additional **git-buildpackage** options.
+`GBP_OPTIONS`
+: Additional `git-buildpackage` options.
 
-PBUILDER_OPTIONS
-: Additional **pbuilder** options. Useful options include "--binary-arch" to only
+`PBUILDER_OPTIONS`
+: Additional `pbuilder` options. Useful options include `--binary-arch` to only
 build the binary packages and not the architecture independent (all) packages and
-"--debbuildopts '-sa'" to force uploading the orig source tarball.
+`"--debbuildopts '-sa'"` to force uploading the orig source tarball.

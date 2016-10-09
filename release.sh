@@ -11,7 +11,7 @@ OS=debian DIST=jessie ARCH=amd64 pbuilder-ev3dev build
 
 debsign ~/pbuilder-ev3dev/debian/jessie-amd64/${source}_${version}_amd64.changes
 
-dput ev3dev-deb ~/pbuilder-ev3dev/debian/jessie-amd64/${source}_${version}_amd64.changes
+dput ev3dev-debian ~/pbuilder-ev3dev/debian/jessie-amd64/${source}_${version}_amd64.changes
 
 gbp buildpackage --git-tag-only
 

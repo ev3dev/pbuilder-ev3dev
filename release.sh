@@ -15,17 +15,17 @@ dput ev3dev-deb ~/pbuilder-ev3dev/debian/jessie-amd64/${source}_${version}_amd64
 
 gbp buildpackage --git-tag-only
 
-ssh ev3dev@reprepro.ev3dev.org reprepro -b ~/reprepro/raspbian includedsc jessie \
-    ~/reprepro/debian/pool/p/${source}/pbuilder-ev3dev_${version}.dsc
-ssh ev3dev@reprepro.ev3dev.org reprepro -b ~/reprepro/raspbian includedeb jessie \
-    ~/reprepro/debian/pool/p/${source}/pbuilder-ev3dev_${version}_all.deb
+ssh ev3dev@reprepro.ev3dev.org "reprepro -b ~/reprepro/raspbian includedsc jessie \
+    ~/reprepro/debian/pool/main/p/${source}/pbuilder-ev3dev_${version}.dsc"
+ssh ev3dev@reprepro.ev3dev.org "reprepro -b ~/reprepro/raspbian includedeb jessie \
+    ~/reprepro/debian/pool/main/p/${source}/pbuilder-ev3dev_${version}_all.deb"
 
-ssh ev3dev@reprepro.ev3dev.org reprepro -b ~/reprepro/ubuntu includedsc trusty \
-    ~/reprepro/debian/pool/p/${source}/pbuilder-ev3dev_${version}.dsc
-ssh ev3dev@reprepro.ev3dev.org reprepro -b ~/reprepro/ubuntu includedeb trusty \
-    ~/reprepro/debian/pool/p/${source}/pbuilder-ev3dev_${version}_all.deb
+ssh ev3dev@reprepro.ev3dev.org "reprepro -b ~/reprepro/ubuntu includedsc trusty \
+    ~/reprepro/debian/pool/main/p/${source}/pbuilder-ev3dev_${version}.dsc"
+ssh ev3dev@reprepro.ev3dev.org "reprepro -b ~/reprepro/ubuntu includedeb trusty \
+    ~/reprepro/debian/pool/main/p/${source}/pbuilder-ev3dev_${version}_all.deb"
 
-ssh ev3dev@reprepro.ev3dev.org reprepro -b ~/reprepro/ubuntu includedsc xenial \
-    ~/reprepro/debian/pool/p/${source}/pbuilder-ev3dev_${version}.dsc
-ssh ev3dev@reprepro.ev3dev.org reprepro -b ~/reprepro/ubuntu includedeb xenial \
-    ~/reprepro/debian/pool/p/${source}/pbuilder-ev3dev_${version}_all.deb
+ssh ev3dev@reprepro.ev3dev.org "reprepro -b ~/reprepro/ubuntu includedsc xenial \
+    ~/reprepro/debian/pool/main/p/${source}/pbuilder-ev3dev_${version}.dsc"
+ssh ev3dev@reprepro.ev3dev.org "reprepro -b ~/reprepro/ubuntu includedeb xenial \
+    ~/reprepro/debian/pool/main/p/${source}/pbuilder-ev3dev_${version}_all.deb"

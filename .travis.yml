@@ -3,7 +3,6 @@ dist: trusty
 sudo: required
 env:
   - OS=debian ARCH=amd64 DIST=jessie
-  - OS=raspbian ARCH=armhf DIST=jessie
 cache:
   directories:
     - $HOME/cache

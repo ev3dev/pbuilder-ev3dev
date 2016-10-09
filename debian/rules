@@ -8,7 +8,7 @@
 
 override_dh_auto_build:
 	dh_auto_build
-	pandoc --standalone --to man doc/pbuilder-ev3dev.md | gzip > doc/pbuilder-ev3dev.1.gz
+	pandoc --standalone --to man doc/pbuilder-ev3dev.md | gzip -9 > doc/pbuilder-ev3dev.1.gz
 
 override_dh_auto_clean:
 	dh_auto_clean

@@ -9,7 +9,7 @@ cache:
 
 before_install:
   - sudo apt-add-repository "deb http://archive.ev3dev.org/ubuntu trusty main"
-  - sudo apt-key adv --keyserver pgp.mit.edu --recv-keys D57D95AF93178A7C
+  - sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys D57D95AF93178A7C
   - sudo apt-get update
   - sudo apt-get install --yes --no-install-recommends
     dpkg-dev

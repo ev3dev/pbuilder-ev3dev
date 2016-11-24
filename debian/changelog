@@ -1,3 +1,10 @@
+pbuilder-ev3dev (1.0.1) stable; urgency=medium
+
+  * debian policy: use gzip -9 on man pages
+  * Fix bootstraping debian stretch
+
+ -- David Lechner <david@lechnology.com>  Wed, 23 Nov 2016 23:26:48 -0600
+
 pbuilder-ev3dev (1.0.0) stable; urgency=medium
 
   * Initial Release.

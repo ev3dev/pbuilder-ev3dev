@@ -138,6 +138,7 @@ base)
         --debootstrap "$DEBOOTSTRAP" \
         --hookdir "" \
         --debootstrapopts "--keyring=/usr/share/keyrings/$OS-archive-keyring.gpg" \
+        --debootstrapopts "--include=gnupg" \
         --extrapackages "fakeroot ca-certificates man-db debhelper lintian" \
         --keyring "/usr/share/keyrings/ev3dev-archive-keyring.gpg"
     ;;

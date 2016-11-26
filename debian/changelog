@@ -1,3 +1,9 @@
+pbuilder-ev3dev (1.0.2) stable; urgency=medium
+
+  * Workaround aptitude crashing qemu when DIST=stretch
+
+ -- David Lechner <david@lechnology.com>  Sat, 26 Nov 2016 11:53:43 -0600
+
 pbuilder-ev3dev (1.0.1) stable; urgency=medium
 
   * debian policy: use gzip -9 on man pages

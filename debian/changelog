@@ -1,3 +1,9 @@
+pbuilder-ev3dev (1.0.3) stable; urgency=medium
+
+  * Add gdebi-core to Recommends:
+
+ -- David Lechner <david@lechnology.com>  Sat, 26 Nov 2016 14:36:03 -0600
+
 pbuilder-ev3dev (1.0.2) stable; urgency=medium
 
   * Workaround aptitude crashing qemu when DIST=stretch

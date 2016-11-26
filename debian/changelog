@@ -1,3 +1,9 @@
+pbuilder-ev3dev (1.0.4) stable; urgency=medium
+
+  * Replace gdebi with classic in satisfydepends workaround
+
+ -- David Lechner <david@lechnology.com>  Sat, 26 Nov 2016 17:07:00 -0600
+
 pbuilder-ev3dev (1.0.3) stable; urgency=medium
 
   * Add gdebi-core to Recommends:

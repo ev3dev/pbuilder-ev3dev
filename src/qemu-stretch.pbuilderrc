@@ -1,0 +1,4 @@
+# The stretch version of aptitude crashes qemu, so we need to use a different
+# dependency resolver.
+
+PBUILDERSATISFYDEPENDSCMD=/usr/lib/pbuilder/pbuilder-satisfydepends-gdebi

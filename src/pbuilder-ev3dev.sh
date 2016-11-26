@@ -109,6 +109,15 @@ else
 fi
 BASETGZ="$BASEDIR/base-$DIST-$ARCH.tgz"
 
+if [ "$needs_qemu" == "true" ] && [ "$DIST" == "stretch" ]; then
+    # stretch version of aptitude crashes qemu.
+    # See: https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=832710
+
+    # There is no command line option for setting PBUILDERSATISFYDEPENDSCMD,
+    # so we have to use a config file.
+    stretch_qemu_option="--configfile $script_dir/qemu-stretch.pbuilderrc"
+fi
+
 case $1 in
 
 # Create/update a pbuilder base image for the specified OS/DIST/ARCH
@@ -154,7 +163,7 @@ build|dev-build)
     gbp buildpackage \
         $GBP_OPTIONS \
         --git-pbuilder \
-        --git-pbuilder-options="--keyring /usr/share/keyrings/ev3dev-archive-keyring.gpg --hookdir $hook_dir $PBUILDER_OPTIONS" \
+        --git-pbuilder-options="--keyring /usr/share/keyrings/ev3dev-archive-keyring.gpg --hookdir $hook_dir $stretch_qemu_option $PBUILDER_OPTIONS" \
         --git-dist=$DIST \
         --git-arch=$ARCH
     ;;
@@ -178,6 +187,7 @@ dsc-build)
         --components "$COMPONENTS" \
         --othermirror "$OTHERMIRROR" \
         --hookdir "$hook_dir" \
+        $stretch_qemu_option \
         $PBUILDER_OPTIONS \
         $2
     ;;

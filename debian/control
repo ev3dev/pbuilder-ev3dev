@@ -17,6 +17,6 @@ Depends: ${misc:Depends}
  , debian-archive-keyring
  , ev3dev-archive-keyring
  , raspbian-archive-keyring
-Recommends: qemu-user-static, debhelper
+Recommends: qemu-user-static, debhelper, gdebi-core
 Description: Package builder for ev3dev Debian packages
  Automates the process of building ev3dev Debian packages in a clean chroot.

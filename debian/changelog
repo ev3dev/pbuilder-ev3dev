@@ -1,3 +1,9 @@
+pbuilder-ev3dev (1.0.4~trusty1) trusty; urgency=medium
+
+  * ev3dev-trusty
+
+ -- David Lechner <david@lechnology.com>  Wed, 12 Jul 2017 13:03:54 -0500
+
 pbuilder-ev3dev (1.0.4) stable; urgency=medium
 
   * Replace gdebi with classic in satisfydepends workaround

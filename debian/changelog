@@ -1,3 +1,9 @@
+pbuilder-ev3dev (1.0.4~trusty2) trusty; urgency=medium
+
+  * Add ubuntu zesty as distro
+
+ -- David Lechner <david@lechnology.com>  Wed, 30 Aug 2017 18:31:13 -0500
+
 pbuilder-ev3dev (1.0.4~trusty1) trusty; urgency=medium
 
   * ev3dev-trusty

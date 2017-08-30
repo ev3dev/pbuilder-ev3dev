@@ -86,7 +86,7 @@ wheezy|jessie|stretch|buster)
         exit 1
     fi
     ;;
-trusty|xenial)
+trusty|xenial|zesty)
     if [ "$OS" != "ubuntu" ]; then
         echo "Bad DIST"
         exit 1

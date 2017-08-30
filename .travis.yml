@@ -29,7 +29,6 @@ before_install:
   - export PATH=$HOME/bin:$PATH
 
 before_script:
-  - pushd /usr/share/debootstrap/scripts/ && sudo ln -s sid stretch && popd
   - git checkout -B ev3dev-trusty
 
 script:

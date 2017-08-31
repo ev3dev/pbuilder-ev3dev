@@ -25,7 +25,7 @@ raspbian)
 ubuntu)
     MIRRORSITE="http://archive.ubuntu.com/ubuntu"
     COMPONENTS="main universe"
-    OTHERMIRROR="deb http://archive.ev3dev.org/ubuntu $DIST main"
+    OTHERMIRROR="deb http://ppa.launchpad.net/ev3dev/tools/ubuntu $DIST main"
     ;;
 *)
     echo "Bad OS"

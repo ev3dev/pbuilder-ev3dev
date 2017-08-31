@@ -1,3 +1,9 @@
+pbuilder-ev3dev (1.0.4~trusty3) trusty; urgency=medium
+
+  * Use ppa:ev3dev/tools for ubuntu
+
+ -- David Lechner <david@lechnology.com>  Wed, 30 Aug 2017 19:41:51 -0500
+
 pbuilder-ev3dev (1.0.4~trusty2) trusty; urgency=medium
 
   * Add ubuntu zesty as distro

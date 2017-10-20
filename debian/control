@@ -16,6 +16,7 @@ Depends: ${misc:Depends}
  , debootstrap
  , debian-archive-keyring
  , ev3dev-archive-keyring
+ , ev3dev-ppa-keyring
  , raspbian-archive-keyring
 Recommends: qemu-user-static, debhelper
 Description: Package builder for ev3dev Debian packages

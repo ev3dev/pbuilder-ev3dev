@@ -1,3 +1,9 @@
+pbuilder-ev3dev (1.0.4~trusty5) trusty; urgency=medium
+
+  * Update for ev3dev PPA keyring
+
+ -- David Lechner <david@lechnology.com>  Fri, 20 Oct 2017 16:14:53 -0500
+
 pbuilder-ev3dev (1.0.4~trusty4) trusty; urgency=medium
 
   * Update stable ubuntu zesty > artful

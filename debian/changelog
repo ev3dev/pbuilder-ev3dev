@@ -1,3 +1,9 @@
+pbuilder-ev3dev (1.0.4~trusty4) trusty; urgency=medium
+
+  * Update stable ubuntu zesty > artful
+
+ -- David Lechner <david@lechnology.com>  Fri, 20 Oct 2017 13:19:23 -0500
+
 pbuilder-ev3dev (1.0.4~trusty3) trusty; urgency=medium
 
   * Use ppa:ev3dev/tools for ubuntu

@@ -25,6 +25,8 @@ before_install:
     raspbian-archive-keyring
     debhelper
     qemu-user-static
+    pandoc
+    fakeroot
   - mkdir -p $HOME/bin
   - ln -s $TRAVIS_BUILD_DIR/src/pbuilder-ev3dev.sh $HOME/bin/pbuilder-ev3dev
   - export PATH=$HOME/bin:$PATH

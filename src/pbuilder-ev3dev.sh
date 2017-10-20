@@ -16,16 +16,19 @@ debian)
     MIRRORSITE="http://ftp.debian.org/debian"
     COMPONENTS="main"
     OTHERMIRROR="deb http://archive.ev3dev.org/debian $DIST main"
+    EV3DEV_KEYRING="ev3dev-archive-keyring"
     ;;
 raspbian)
     MIRRORSITE="http://archive.raspbian.org/raspbian"
     COMPONENTS="main"
     OTHERMIRROR="deb http://archive.ev3dev.org/raspbian $DIST main"
+    EV3DEV_KEYRING="ev3dev-archive-keyring"
     ;;
 ubuntu)
     MIRRORSITE="http://archive.ubuntu.com/ubuntu"
     COMPONENTS="main universe"
     OTHERMIRROR="deb http://ppa.launchpad.net/ev3dev/tools/ubuntu $DIST main"
+    EV3DEV_KEYRING="ev3dev-ppa-keyring"
     ;;
 *)
     echo "Bad OS"
@@ -149,7 +152,7 @@ base)
         --debootstrapopts "--keyring=/usr/share/keyrings/$OS-archive-keyring.gpg" \
         --debootstrapopts "--include=gnupg" \
         --extrapackages "fakeroot ca-certificates man-db debhelper lintian" \
-        --keyring "/usr/share/keyrings/ev3dev-archive-keyring.gpg"
+        --keyring "/usr/share/keyrings/$EV3DEV_KEYRING.gpg"
     ;;
 
 build|dev-build)
@@ -163,7 +166,7 @@ build|dev-build)
     gbp buildpackage \
         $GBP_OPTIONS \
         --git-pbuilder \
-        --git-pbuilder-options="--keyring /usr/share/keyrings/ev3dev-archive-keyring.gpg --hookdir $hook_dir $stretch_qemu_option $PBUILDER_OPTIONS" \
+        --git-pbuilder-options="--keyring /usr/share/keyrings/$EV3DEV_KEYRING.gpg --hookdir $hook_dir $stretch_qemu_option $PBUILDER_OPTIONS" \
         --git-dist=$DIST \
         --git-arch=$ARCH
     ;;

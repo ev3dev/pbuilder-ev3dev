@@ -4,13 +4,15 @@ sudo: required
 env:
   - OS=debian ARCH=amd64 DIST=jessie
   - OS=debian ARCH=amd64 DIST=stretch
+  - OS=ubuntu ARCH=amd64 DIST=trusty
+  - OS=ubuntu ARCH=amd64 DIST=xenial
+  - OS=ubuntu ARCH=amd64 DIST=artful
 cache:
   directories:
     - $HOME/cache
 
 before_install:
-  - sudo apt-add-repository "deb http://archive.ev3dev.org/ubuntu trusty main"
-  - sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys D57D95AF93178A7C
+  - sudo apt-add-repository ppa:ev3dev/tools --yes
   - sudo apt-get update
   - sudo apt-get install --yes --no-install-recommends
     dpkg-dev
@@ -19,6 +21,7 @@ before_install:
     debootstrap
     debian-archive-keyring
     ev3dev-archive-keyring
+    ev3dev-ppa-keyring
     raspbian-archive-keyring
     debhelper
     qemu-user-static

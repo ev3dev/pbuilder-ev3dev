@@ -10,6 +10,7 @@ Vcs-Browser: https://github.com/ev3dev/pbuilder-ev3dev
 Package: pbuilder-ev3dev
 Architecture: all
 Depends: ${misc:Depends}
+ , dpkg (>= 1.17.6)
  , dpkg-dev
  , git-buildpackage
  , pbuilder

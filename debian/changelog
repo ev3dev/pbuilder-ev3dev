@@ -1,3 +1,9 @@
+pbuilder-ev3dev (1.0.5~trusty1) trusty; urgency=medium
+
+  * artful>bionic
+
+ -- David Lechner <david@lechnology.com>  Sat, 10 Mar 2018 20:23:44 -0600
+
 pbuilder-ev3dev (1.0.4~trusty5) trusty; urgency=medium
 
   * Update for ev3dev PPA keyring

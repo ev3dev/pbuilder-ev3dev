@@ -1,3 +1,10 @@
+pbuilder-ev3dev (1.0.5) stable; urgency=medium
+
+  * Use ppa:ev3dev/tools for ubuntu
+  * artful>bionic
+
+ -- David Lechner <david@lechnology.com>  Sat, 10 Mar 2018 20:17:16 -0600
+
 pbuilder-ev3dev (1.0.4) stable; urgency=medium
 
   * Replace gdebi with classic in satisfydepends workaround

@@ -1,3 +1,9 @@
+pbuilder-ev3dev (1.0.5~trusty3) trusty; urgency=medium
+
+  * fix syntax error from previous change
+
+ -- David Lechner <david@lechnology.com>  Sat, 10 Mar 2018 21:34:30 -0600
+
 pbuilder-ev3dev (1.0.5~trusty2) trusty; urgency=medium
 
   * Add minimum debian-archive-keyring needed for buster

@@ -38,5 +38,7 @@ before_script:
   - git checkout -B ev3dev-trusty
 
 script:
-  - pbuilder-ev3dev base
-  - pbuilder-ev3dev build
+  - pbuilder-ev3dev base && pbuilder-ev3dev build
+
+after_failure:
+  - sudo rm /home/travis/cache/base-$DIST-$ARCH.tgz

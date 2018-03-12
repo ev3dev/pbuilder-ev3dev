@@ -1,3 +1,10 @@
+pbuilder-ev3dev (1.0.6~trusty1) trusty; urgency=medium
+
+  * need newer version of dpkg for boostraping bionic
+  * Delete base.tar.gz if pbuilder exists with error
+
+ -- David Lechner <david@lechnology.com>  Mon, 12 Mar 2018 17:36:24 -0500
+
 pbuilder-ev3dev (1.0.5~trusty3) trusty; urgency=medium
 
   * fix syntax error from previous change

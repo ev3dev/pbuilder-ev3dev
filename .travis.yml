@@ -27,6 +27,11 @@ before_install:
     qemu-user-static
     pandoc
     fakeroot
+  # temporary need for trusty-proposed
+  - sudo cp .travis/trusty-proposed.list /etc/apt/sources.list.d/
+  - sudo apt update
+  - sudo apt install dpkg
+  # end temporary workaround
   - mkdir -p $HOME/bin
   - ln -s $TRAVIS_BUILD_DIR/src/pbuilder-ev3dev.sh $HOME/bin/pbuilder-ev3dev
   - export PATH=$HOME/bin:$PATH

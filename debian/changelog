@@ -1,3 +1,9 @@
+pbuilder-ev3dev (1.0.6~trusty2) trusty; urgency=medium
+
+  * debian: ubuntu backported the needed dpkg change
+
+ -- David Lechner <david@lechnology.com>  Mon, 12 Mar 2018 18:46:48 -0500
+
 pbuilder-ev3dev (1.0.6~trusty1) trusty; urgency=medium
 
   * need newer version of dpkg for boostraping bionic

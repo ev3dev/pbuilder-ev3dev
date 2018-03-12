@@ -139,6 +139,10 @@ base)
     else
         DEBOOTSTRAP="debootstrap"
     fi
+
+    # delete the file if pbuilder exits with an error code
+    trap "rm $BASETGZ" ERR
+
     sudo pbuilder --$COMMAND \
         --basetgz "$BASETGZ" \
         --override-config \

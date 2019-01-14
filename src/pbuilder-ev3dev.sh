@@ -112,7 +112,7 @@ else
 fi
 BASETGZ="$BASEDIR/base-$DIST-$ARCH.tgz"
 
-if [ "$needs_qemu" == "true" ] && [ "$DIST" == "stretch" ]; then
+if [ "$needs_qemu" == "true" ] && ( [ "$DIST" == "stretch" ] || [ "$DIST" == "buster" ] ); then
     # stretch version of aptitude crashes qemu.
     # See: https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=832710
 

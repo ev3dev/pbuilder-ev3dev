@@ -141,7 +141,7 @@ base)
     fi
 
     # delete the file if pbuilder exits with an error code
-    trap "rm $BASETGZ" ERR
+    trap "rm -f $BASETGZ" ERR
 
     sudo pbuilder --$COMMAND \
         --basetgz "$BASETGZ" \

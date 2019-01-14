@@ -1,3 +1,10 @@
+pbuilder-ev3dev (1.1.0) xenial; urgency=medium
+
+  * buster aptitude also crashes (silently) with qemu
+  * drop wheezy
+
+ -- David Lechner <david@lechnology.com>  Sun, 13 Jan 2019 18:27:57 -0600
+
 pbuilder-ev3dev (1.0.6~trusty2) trusty; urgency=medium
 
   * debian: ubuntu backported the needed dpkg change

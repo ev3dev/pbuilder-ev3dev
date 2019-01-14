@@ -1,10 +1,9 @@
 language: bash
-dist: trusty
+dist: xenial
 sudo: required
 env:
-  - OS=debian ARCH=amd64 DIST=jessie
   - OS=debian ARCH=amd64 DIST=stretch
-  - OS=ubuntu ARCH=amd64 DIST=trusty
+  - OS=debian ARCH=amd64 DIST=buster
   - OS=ubuntu ARCH=amd64 DIST=xenial
   - OS=ubuntu ARCH=amd64 DIST=bionic
 cache:
@@ -27,11 +26,6 @@ before_install:
     qemu-user-static
     pandoc
     fakeroot
-  # temporary need for trusty-proposed
-  - sudo cp .travis/trusty-proposed.list /etc/apt/sources.list.d/
-  - sudo apt update
-  - sudo apt install dpkg
-  # end temporary workaround
   - mkdir -p $HOME/bin
   - ln -s $TRAVIS_BUILD_DIR/src/pbuilder-ev3dev.sh $HOME/bin/pbuilder-ev3dev
   - export PATH=$HOME/bin:$PATH
@@ -40,7 +34,7 @@ before_install:
     fi
 
 before_script:
-  - git checkout -B ev3dev-trusty
+  - git checkout -B ev3dev-xenial
 
 script:
   - pbuilder-ev3dev base || sudo rm /home/travis/cache/base-$DIST-$ARCH.tgz

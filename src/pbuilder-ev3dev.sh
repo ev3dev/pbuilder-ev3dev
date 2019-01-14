@@ -83,7 +83,7 @@ armel)
 esac
 
 case "$DIST" in
-wheezy|jessie|stretch|buster)
+jessie|stretch|buster)
     if [ "$OS" != "debian" ] && [ "$OS" != "raspbian" ]; then
         echo "Bad DIST"
         exit 1

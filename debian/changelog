@@ -1,5 +1,6 @@
 pbuilder-ev3dev (1.1.0) xenial; urgency=medium
 
+  * fix removing .tar.gz after failed debootstrap
   * buster aptitude also crashes (silently) with qemu
   * drop wheezy
 

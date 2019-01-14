@@ -25,8 +25,8 @@ if needed).
 Note: Raspbian only supports "armhf" and Ubuntu only supports "amd64".
 
 *dist*
-: The target distribution. For Debian/Raspbian, this can be "wheezy", "jessie"
-or "stretch". For Ubuntu, this can be "trusty" or "xenial".
+: The target distribution. For Debian/Raspbian, this can be "jessie", "stretch"
+or "buster". For Ubuntu, this can be "trusty", "xenial" or "bionic".
 
 *command*
 : The command to run. See **COMMANDS** section below.

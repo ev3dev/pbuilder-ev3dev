@@ -2,7 +2,7 @@
 #
 # ev3dev-pbuilder - debian package builder for ev3dev
 #
-# Copyright (C) 2016 David Lechner <david@lechnology.com>
+# Copyright (C) 2016-2019 David Lechner <david@lechnology.com>
 #
 
 set -e
@@ -27,7 +27,7 @@ raspbian)
 ubuntu)
     MIRRORSITE="http://archive.ubuntu.com/ubuntu"
     COMPONENTS="main universe"
-    OTHERMIRROR="deb http://ppa.launchpad.net/ev3dev/tools/ubuntu $DIST main"
+    OTHERMIRROR="deb http://archive.ubuntu.com/ubuntu $DIST-updates $COMPONENTS | deb http://ppa.launchpad.net/ev3dev/tools/ubuntu $DIST main"
     EV3DEV_KEYRING="ev3dev-ppa-keyring"
     ;;
 *)

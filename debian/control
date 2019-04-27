@@ -13,6 +13,7 @@ Depends: ${misc:Depends}
  , dpkg (>= 1.17.5ubuntu5.8)
  , dpkg-dev
  , git-buildpackage
+ , fakeroot
  , pbuilder
  , debootstrap
  , debian-archive-keyring (>= 2014.2)

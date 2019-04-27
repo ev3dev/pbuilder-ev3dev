@@ -15,7 +15,7 @@ Depends: ${misc:Depends}
  , git-buildpackage
  , fakeroot
  , pbuilder
- , debootstrap
+ , debootstrap (>= 1.0.95)
  , debian-archive-keyring (>= 2014.2)
  , ev3dev-archive-keyring
  , ev3dev-ppa-keyring

@@ -1,3 +1,10 @@
+pbuilder-ev3dev (1.1.1) xenial; urgency=medium
+
+  * fakeroot is required
+  * require debootstrap (>= 1.0.95)
+
+ -- David Lechner <david@lechnology.com>  Sat, 27 Apr 2019 01:42:39 -0500
+
 pbuilder-ev3dev (1.1.0) xenial; urgency=medium
 
   * fix removing .tar.gz after failed debootstrap

@@ -1,3 +1,9 @@
+pbuilder-ev3dev (1.2.0) xenial; urgency=medium
+
+  * Add $DIST-updates archive for Ubuntu
+
+ -- David Lechner <david@lechnology.com>  Sat, 27 Apr 2019 12:50:39 -0500
+
 pbuilder-ev3dev (1.1.1) xenial; urgency=medium
 
   * fakeroot is required

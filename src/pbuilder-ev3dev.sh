@@ -66,7 +66,10 @@ armhf)
     fi
     ;;
 armel)
-    if [ "$OS" == "ubuntu" ]; then
+    if [ "$OS" == "raspbian" ]; then
+        echo "Bad ARCH"
+        exit 1
+    elif [ "$OS" == "ubuntu" ]; then
         echo "Bad ARCH"
         exit 1
     elif [ "$host_arch" == "amd64" ] || [ "$host_arch" == "i386" ]; then

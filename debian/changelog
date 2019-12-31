@@ -1,3 +1,10 @@
+pbuilder-ev3dev (1.1.0) buster; urgency=medium
+
+  * error when OS=raspbian ARCH=armel
+  * add ARCH=amd64 support
+
+ -- David Lechner <david@lechnology.com>  Tue, 31 Dec 2019 11:24:55 -0600
+
 pbuilder-ev3dev (1.0.5) stable; urgency=medium
 
   * Use ppa:ev3dev/tools for ubuntu

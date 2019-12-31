@@ -25,9 +25,13 @@ raspbian)
     EV3DEV_KEYRING="ev3dev-archive-keyring"
     ;;
 ubuntu)
-    MIRRORSITE="http://archive.ubuntu.com/ubuntu"
+    if [ "$ARCH" == "amd64" ] || [ "$ARCH" == "i386" ]; then
+        MIRRORSITE="http://archive.ubuntu.com"
+    else
+        MIRRORSITE="http://ports.ubuntu.com"
+    fi
     COMPONENTS="main universe"
-    OTHERMIRROR="deb http://archive.ubuntu.com/ubuntu $DIST-updates $COMPONENTS | deb http://ppa.launchpad.net/ev3dev/tools/ubuntu $DIST main"
+    OTHERMIRROR="deb $MIRRORSITE $DIST-updates $COMPONENTS | deb http://ppa.launchpad.net/ev3dev/tools/ubuntu $DIST main"
     EV3DEV_KEYRING="ev3dev-ppa-keyring"
     ;;
 *)
@@ -75,6 +79,17 @@ armel)
     elif [ "$host_arch" == "amd64" ] || [ "$host_arch" == "i386" ]; then
         needs_qemu="true"
     elif [ "$host_arch" != "armhf" ] && [ "$host_arch" != "armel" ]; then
+        echo "Bad ARCH"
+        exit 1
+    fi
+    ;;
+arm64)
+    if [ "$OS" == "raspbian" ]; then
+        echo "Bad ARCH"
+        exit 1
+    elif [ "$host_arch" == "amd64" ] || [ "$host_arch" == "i386" ]; then
+        needs_qemu="true"
+    elif [ "$host_arch" != "arm64" ] && [ "$host_arch" != "arm64" ]; then
         echo "Bad ARCH"
         exit 1
     fi

@@ -21,8 +21,9 @@ if needed).
 : The target operating system. This can be "debian", "rasbian", or "ubuntu".
 
 *arch*
-: The target architecture. This can be "amd64", "i386", "armhf" or "armel".
-Note: Raspbian only supports "armhf" and Ubuntu only supports "amd64".
+: The target architecture. This can be "amd64", "i386", "arm64", "armhf" or
+"armel". Note: Raspbian only supports "armhf" and Ubuntu does not support
+"armhf" or "armel".
 
 *dist*
 : The target distribution. For Debian/Raspbian, this can be "jessie", "stretch"

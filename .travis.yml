@@ -1,13 +1,9 @@
 language: bash
-dist: trusty
+dist: bionic
 sudo: required
 env:
-  - OS=debian ARCH=amd64 DIST=jessie
   - OS=debian ARCH=amd64 DIST=stretch
   - OS=debian ARCH=amd64 DIST=buster
-  - OS=ubuntu ARCH=amd64 DIST=trusty
-  - OS=ubuntu ARCH=amd64 DIST=xenial
-  - OS=ubuntu ARCH=amd64 DIST=bionic
 cache:
   directories:
     - $HOME/cache
@@ -31,9 +27,6 @@ before_install:
   - mkdir -p $HOME/bin
   - ln -s $TRAVIS_BUILD_DIR/src/pbuilder-ev3dev.sh $HOME/bin/pbuilder-ev3dev
   - export PATH=$HOME/bin:$PATH
-  - if [ ! -e /usr/share/debootstrap/scripts/bionic ]; then
-      sudo ln -s gutsy /usr/share/debootstrap/scripts/bionic;
-    fi
 
 before_script:
   - git checkout -B master

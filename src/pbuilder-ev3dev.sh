@@ -31,7 +31,7 @@ ubuntu)
         MIRRORSITE="http://ports.ubuntu.com"
     fi
     COMPONENTS="main universe"
-    OTHERMIRROR="deb http://ppa.launchpad.net/ev3dev/tools/ubuntu $DIST main"
+    OTHERMIRROR="deb $MIRRORSITE $DIST-updates $COMPONENTS | deb http://ppa.launchpad.net/ev3dev/tools/ubuntu $DIST main"
     EV3DEV_KEYRING="ev3dev-ppa-keyring"
     ;;
 *)
@@ -101,7 +101,7 @@ arm64)
 esac
 
 case "$DIST" in
-wheezy|jessie|stretch|buster)
+jessie|stretch|buster)
     if [ "$OS" != "debian" ] && [ "$OS" != "raspbian" ]; then
         echo "Bad DIST"
         exit 1
@@ -157,6 +157,10 @@ base)
     else
         DEBOOTSTRAP="debootstrap"
     fi
+
+    # delete the file if pbuilder exits with an error code
+    trap "rm -f $BASETGZ" ERR
+
     sudo pbuilder --$COMMAND \
         --basetgz "$BASETGZ" \
         --override-config \

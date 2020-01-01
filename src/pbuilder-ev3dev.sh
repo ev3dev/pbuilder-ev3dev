@@ -26,7 +26,7 @@ raspbian)
     ;;
 ubuntu)
     if [ "$ARCH" == "amd64" ] || [ "$ARCH" == "i386" ]; then
-        MIRRORSITE="http://archive.ubuntu.com"
+        MIRRORSITE="http://archive.ubuntu.com/ubuntu"
     else
         MIRRORSITE="http://ports.ubuntu.com"
     fi

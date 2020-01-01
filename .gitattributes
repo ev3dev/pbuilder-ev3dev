@@ -1,0 +1,2 @@
+debian/*        merge=ours
+.travis.yml     merge=ours

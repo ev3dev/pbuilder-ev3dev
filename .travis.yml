@@ -29,7 +29,7 @@ before_install:
   - export PATH=$HOME/bin:$PATH
 
 before_script:
-  - git checkout -B master
+  - git checkout -B ev3dev-buster
 
 script:
   - pbuilder-ev3dev base

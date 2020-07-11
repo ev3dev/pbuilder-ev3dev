@@ -64,7 +64,7 @@ armhf)
         exit 1
     elif [ "$host_arch" == "amd64" ] || [ "$host_arch" == "i386" ]; then
         needs_qemu="true"
-    elif [ "$host_arch" != "armhf" ]; then
+    elif [ "$host_arch" != "armhf" ] && [ "$host_arch" != "arm64" ]; then
         echo "Can't build armhf on $host_arch"
         exit 1
     fi
@@ -78,7 +78,7 @@ armel)
         exit 1
     elif [ "$host_arch" == "amd64" ] || [ "$host_arch" == "i386" ]; then
         needs_qemu="true"
-    elif [ "$host_arch" != "armhf" ] && [ "$host_arch" != "armel" ]; then
+    elif [ "$host_arch" != "armel" ] && [ "$host_arch" != "armhf" ] && [ "$host_arch" != "arm64" ]; then
         echo "Can't build arm on $host_arch"
         exit 1
     fi
@@ -89,7 +89,7 @@ arm64)
         exit 1
     elif [ "$host_arch" == "amd64" ] || [ "$host_arch" == "i386" ]; then
         needs_qemu="true"
-    elif [ "$host_arch" != "arm64" ] && [ "$host_arch" != "arm64" ]; then
+    elif [ "$host_arch" != "arm64" ]; then
         echo "Can't build arm64 on $host_arch"
         exit 1
     fi

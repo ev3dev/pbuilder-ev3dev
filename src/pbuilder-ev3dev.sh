@@ -35,67 +35,67 @@ ubuntu)
     EV3DEV_KEYRING="ev3dev-ppa-keyring"
     ;;
 *)
-    echo "Bad OS"
+    echo "Unsupported OS: $OS"
     exit 1
 esac
 
 case "$ARCH" in
 amd64)
     if [ "$OS" == "raspbian" ]; then
-        echo "Bad ARCH"
+        echo "Rasbian is armhf only, not $ARCH"
         exit 1
     elif [ "$host_arch" != "amd64" ]; then
-        echo "Bad ARCH"
+        echo "Can't build amd64 on $host_arch"
         exit 1
     fi
     ;;
 i386)
     if [ "$OS" == "raspbian" ]; then
-        echo "Bad ARCH"
+        echo "Rasbian is armhf only, not $ARCH"
         exit 1
     elif [ "$host_arch" != "amd64" ] && [ "$host_arch" != "i386" ]; then
-        echo "Bad ARCH"
+        echo "Can't build i386 on $host_arch"
         exit 1
     fi
     ;;
 armhf)
     if [ "$OS" == "ubuntu" ]; then
-        echo "Bad ARCH"
+        echo "Ubuntu armhf is not supported"
         exit 1
     elif [ "$host_arch" == "amd64" ] || [ "$host_arch" == "i386" ]; then
         needs_qemu="true"
     elif [ "$host_arch" != "armhf" ]; then
-        echo "Bad ARCH"
+        echo "Can't build armhf on $host_arch"
         exit 1
     fi
     ;;
 armel)
     if [ "$OS" == "raspbian" ]; then
-        echo "Bad ARCH"
+        echo "Rasbian is armhf only, not $ARCH"
         exit 1
     elif [ "$OS" == "ubuntu" ]; then
-        echo "Bad ARCH"
+        echo "Ubuntu armel is not supported"
         exit 1
     elif [ "$host_arch" == "amd64" ] || [ "$host_arch" == "i386" ]; then
         needs_qemu="true"
     elif [ "$host_arch" != "armhf" ] && [ "$host_arch" != "armel" ]; then
-        echo "Bad ARCH"
+        echo "Can't build arm on $host_arch"
         exit 1
     fi
     ;;
 arm64)
     if [ "$OS" == "raspbian" ]; then
-        echo "Bad ARCH"
+        echo "Rasbian is armhf only, not $ARCH"
         exit 1
     elif [ "$host_arch" == "amd64" ] || [ "$host_arch" == "i386" ]; then
         needs_qemu="true"
     elif [ "$host_arch" != "arm64" ] && [ "$host_arch" != "arm64" ]; then
-        echo "Bad ARCH"
+        echo "Can't build arm64 on $host_arch"
         exit 1
     fi
     ;;
 *)
-    echo "Bad ARCH"
+    echo "Unsupported ARCH: $ARCH"
     exit 1
     ;;
 esac
@@ -103,18 +103,18 @@ esac
 case "$DIST" in
 jessie|stretch|buster)
     if [ "$OS" != "debian" ] && [ "$OS" != "raspbian" ]; then
-        echo "Bad DIST"
+        echo "Unsupported Debian DIST: $DIST"
         exit 1
     fi
     ;;
 bionic|focal)
     if [ "$OS" != "ubuntu" ]; then
-        echo "Bad DIST"
+        echo "Unsupported Ubuntu DIST: $DIST"
         exit 1
     fi
     ;;
 *)
-    echo "Bad DIST"
+    echo "Unsupported DIST: $DIST"
     exit 1
     ;;
 esac

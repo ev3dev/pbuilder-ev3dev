@@ -26,8 +26,8 @@ if needed).
 "armhf" or "armel".
 
 *dist*
-: The target distribution. For Debian/Raspbian, this can be "jessie", "stretch"
-or "buster". For Ubuntu, this can be "bionic" or "focal".
+: The target distribution. For Debian/Raspbian, this can be "stretch", "buster"
+or "bullseye". For Ubuntu, this can be "bionic" or "focal".
 
 *command*
 : The command to run. See **COMMANDS** section below.

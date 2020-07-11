@@ -101,7 +101,7 @@ arm64)
 esac
 
 case "$DIST" in
-jessie|stretch|buster)
+stretch|buster|bullseye)
     if [ "$OS" != "debian" ] && [ "$OS" != "raspbian" ]; then
         echo "Unsupported Debian DIST: $DIST"
         exit 1
@@ -130,7 +130,7 @@ else
 fi
 BASETGZ="$BASEDIR/base-$DIST-$ARCH.tgz"
 
-if [ "$needs_qemu" == "true" ] && ( [ "$DIST" == "stretch" ] || [ "$DIST" == "buster" ] ); then
+if [ "$needs_qemu" == "true" ]; then
     # stretch version of aptitude crashes qemu.
     # See: https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=832710
 

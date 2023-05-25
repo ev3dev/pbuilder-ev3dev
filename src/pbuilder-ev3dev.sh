@@ -107,7 +107,7 @@ stretch|buster|bullseye)
         exit 1
     fi
     ;;
-bionic|focal)
+bionic|focal|jammy)
     if [ "$OS" != "ubuntu" ]; then
         echo "Unsupported Ubuntu DIST: $DIST"
         exit 1

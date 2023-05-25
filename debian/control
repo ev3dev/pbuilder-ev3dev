@@ -2,8 +2,8 @@ Source: pbuilder-ev3dev
 Section: devel
 Priority: optional
 Maintainer: David Lechner <david@lechnology.com>
-Build-Depends: debhelper (>=9), pandoc
-Standards-Version: 3.9.6
+Build-Depends: debhelper (>=13), pandoc
+Standards-Version: 4.6.0
 Vcs-Git: git://github.com/ev3dev/pbuilder-ev3dev.git
 Vcs-Browser: https://github.com/ev3dev/pbuilder-ev3dev
 

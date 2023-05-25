@@ -27,7 +27,7 @@ if needed).
 
 *dist*
 : The target distribution. For Debian/Raspbian, this can be "stretch", "buster"
-or "bullseye". For Ubuntu, this can be "bionic" or "focal".
+or "bullseye". For Ubuntu, this can be "bionic", "focal" or "jammy".
 
 *command*
 : The command to run. See **COMMANDS** section below.

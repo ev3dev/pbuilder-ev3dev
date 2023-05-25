@@ -13,7 +13,7 @@ host_arch=$(dpkg --print-architecture)
 
 case "$OS" in
 debian)
-    MIRRORSITE="http://ftp.debian.org/debian"
+    MIRRORSITE="http://archive.debian.org/debian"
     COMPONENTS="main"
     OTHERMIRROR="deb http://archive.ev3dev.org/debian $DIST main"
     EV3DEV_KEYRING="ev3dev-archive-keyring"
